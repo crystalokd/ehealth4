@@ -1,0 +1,41 @@
+{% extends 'core/base2.html' %}
+
+
+<!--Navbar content -->
+{% block navbar-content %}
+    
+{% endblock navbar-content %}
+
+<!--Page content -->
+{% block content %}
+<div class="container">
+    <br><br><br>
+
+    <table class="table table-border" id="example" style="text-align: center;">
+        <thead class="table-success">
+            <tr>
+                <th>Name</th>
+                <th>Stomach ache</th>
+                <th>Diarrheal</th>
+                <th>Injuries</th>
+                <th>Head ache</th>
+                <th>Cough</th>
+            </tr>
+        </thead>
+        <tbody>
+      {% for user in users %}
+
+        <tr>
+            <td>{{ user.first_name }}</td>
+            <td>{{ user.Stomach_ach }}</td>
+            <td>{{ user.Diarrheal }}</td>
+            <td>{{ user.Injuries }}</td>
+            <td>{{ user.Head_ache }}</td>
+            <td>{{ user.Cough }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+</div>
+{% endblock content %}
+
